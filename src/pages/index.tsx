@@ -1,3 +1,7 @@
-export default function Home() {
-  return (<h1>Hello there</h1> )
+import React from 'react'
+
+function Index() {
+  return (<p>ahud</p>)
 }
+
+export default Index

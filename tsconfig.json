@@ -18,6 +18,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/lib/mongodb.js",
+    "src/pages/serverComponents",
+    "src/pages/inscription.jsx"
+  ],
   "exclude": ["node_modules"]
 }
