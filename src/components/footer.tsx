@@ -1,4 +1,6 @@
-export const Footer:React.FC = () =>
+import React from "react"
+
+ export const Footer = () =>
 {
-    return <div className="text-white mt-5 h-14 bg-purple-950"><p>Page footer</p></div>
+    return <footer className="text-white mt-5 h-14 bg-purple-950">Page footer</footer>
 }

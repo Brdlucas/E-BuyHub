@@ -24,7 +24,8 @@
     "**/*.tsx",
     "src/lib/mongodb.js",
     "src/pages/serverComponents",
-    "src/pages/inscription.jsx"
+    "src/pages/inscription.jsx",
+    "src/components/header.jsx"
   ],
   "exclude": ["node_modules"]
 }

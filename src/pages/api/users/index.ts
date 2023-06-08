@@ -13,15 +13,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // Potential Responses
   const handleCase: ResponseFuncs = {
     // RESPONSE FOR GET REQUESTS
-    // GET: async (req: NextApiRequest, res: NextApiResponse) => {
-    //   try {
-    //     const { Users } = await connect() // connect to database
-    //     res.json(await Users.find({}).catch(catcher))        
-    //   } catch (error) {
-    //     res.json(error);
-    //     res.status(405).end();
-    //   }
-    // },
+    GET: async (req: NextApiRequest, res: NextApiResponse) => {
+      try {
+        const { Users } = await connect() // connection a la base de données
+        res.json(await Users.find({}).catch(catcher))        
+      } catch (error) {
+        res.json(error);
+        res.status(405).end();
+      }
+    },
     // RESPONSE POST REQUESTS
     POST: async (req: NextApiRequest, res: NextApiResponse) => {
       try {

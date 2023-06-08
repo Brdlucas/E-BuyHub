@@ -42,7 +42,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
       console.error(error)
     });
 
-  // after api request, push back to main page
+  // retourne vers la page home
   router.push("/")
 }
 return (

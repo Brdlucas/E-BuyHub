@@ -8,7 +8,6 @@ export interface ResponseFuncs {
   
   // Interface pour le model frontend
   export interface Users {
-    _id?: number
     firstname: string
     lastname: string
     email: string
