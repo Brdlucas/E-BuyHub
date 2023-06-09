@@ -42,9 +42,9 @@ export default function Connexion(props: CreateProps) {
             <form onSubmit={handeSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
                 <div className="flex flex-col md:w-[50%] md:m-auto md:mt-5">
                   <label htmlFor="email">Email :</label>
-                <input type="email" name="email" id='email' className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com"></input>
+                <input type="email" name="email" id='email' className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com" required/>
                   <label htmlFor="email">Mot de passe :</label>
-                <input type="password" name="password" id='password' className=" m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px] md:mt-5 w-[100%]" placeholder='**********' />
+                <input type="password" name="password" id='password' className=" m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px] md:mt-5 w-[100%]" placeholder='**********' required/>
                 <input type="submit" className="cursor-pointer md:p-3 w-[200px] bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Inscription"></input>
                 </div>
             </form>

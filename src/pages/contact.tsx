@@ -48,17 +48,17 @@ return (
         <div className="text-center mt-10 h-[200px]">
             <form  onSubmit={handleSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
                 <label htmlFor='lastname'>Nom :</label>
-                <input type="text" name="lastname" id='lastname' ref={lastname} className="md:ml-3 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[40px]" placeholder="Martin"></input>
+                <input type="text" name="lastname" id='lastname' ref={lastname} className="md:ml-3 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[40px]" placeholder="Martin" required/>
                 <label htmlFor='firstname' className="md:ml-[20px]"> Prénom : </label>
-                <input type="text" name="firstname" id='firstname' ref={firstname} className="max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[40px]" placeholder="Jean"></input>
+                <input type="text" name="firstname" id='firstname' ref={firstname} className="max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[40px]" placeholder="Jean" required/>
                 <div className="flex flex-col md:w-[50%] md:m-auto md:mt-5">
                   <label htmlFor="email">Email :</label>
-                <input type="email" name="email" id='email' ref={email} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com"></input>
+                <input type="email" name="email" id='email' ref={email} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com" required/>
                   <label htmlFor="email">Titre :</label>
-                <input type="text" name="title" id='title' ref={title} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="Problème | Demande"></input>
+                <input type="text" name="title" id='title' ref={title} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="Problème | Demande" required/>
                   <label htmlFor="email">Mot de passe :</label>
-                <input type="text" name="password" id='password' ref={description} className=" m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px] md:mt-5 w-[100%]" placeholder='**********' />
-                <input type="submit" className="cursor-pointer md:p-3 w-[200px] bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Envoyez"></input>
+                <input type="text" name="password" id='password' ref={description} className=" m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px] md:mt-5 w-[100%]" placeholder='**********' required/>
+                <input type="submit" className="cursor-pointer md:p-3 w-[200px] bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Envoyez" />
                 </div>
             </form>
         </div>
