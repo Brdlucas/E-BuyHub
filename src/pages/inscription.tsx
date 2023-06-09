@@ -32,7 +32,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.parse(JSON.stringify(users)),
+    body: JSON.stringify(users),
   })
     .then(response => response.json())
     .catch(error => {
