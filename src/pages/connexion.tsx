@@ -26,6 +26,7 @@ export default function Connexion(props: CreateProps) {
             headers: {
                 "Content-Type": "application/json",
             },
+          body: JSON.parse(JSON.stringify(users)),
         })
         .then(response => response.json())
         .catch(error => {
