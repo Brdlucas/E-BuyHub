@@ -13,3 +13,15 @@ export interface ResponseFuncs {
     email: string
     password: string
   }
+
+  export interface newsLetters {
+    email: string
+  }
+
+  export interface contact {
+    firstname: string
+    lastname: string
+    email: string
+    title: string
+    description: string
+  }

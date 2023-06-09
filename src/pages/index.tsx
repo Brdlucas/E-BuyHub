@@ -1,7 +1,41 @@
-import React from 'react'
+import React, { FormEventHandler, useRef } from 'react'
 import Image from 'next/image'
+import { newsLetters } from '../../utils/types'
+import { useRouter } from "next/router"
 
-function Index() {
+interface CreateProps {
+  url: string
+}
+
+export default function Index(props: CreateProps) {
+
+  const router = useRouter()
+
+  const email = useRef<HTMLInputElement>(null)
+  
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async e => {
+    e.preventDefault()
+
+    let letter: newsLetters = {email: ""};
+    if (null !== email.current) {
+      letter = {email: email.current.value}
+    }
+
+    await fetch(props.url, {
+      method: 'post',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(letter),
+    })
+    .then(response => response.json())
+    .catch(error => {
+      console.log(error)
+    })
+    router.push("/")
+  }
+
   return (
     <section className="mt-5">
       <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col'>
@@ -27,7 +61,7 @@ function Index() {
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
           <Image className='m-auto mt-2' src={'/img/sac.webp'} height={0} width={150} alt='sch.jpg' />
           <hr className='mt-2 border border-neutral-600'/>
-          <p className='ml-1 font-bold'>Seche-cheveux</p>
+          <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
           <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
@@ -57,13 +91,20 @@ function Index() {
       Inscrivez-vous à notre newsletter dès aujourd hui et laissez-nous vous emmener dans un voyage extraordinaire au cœur de l information. Soyez au courant 
       de tout ce qui compte pour vous.
       </p>
-      <form className='text-center'>
-        <input type="text" placeholder="email" className='bg-purple-950 m-auto text-white pl-3 w-[50%] mt-5 max-md:w-[95%] h-[50px] mb-5 rounded-[20px]'/>
-        <input type="submit" value="Envoyez" className='font-bold mb-5 bg-purple-900 ml-5 w-[10%] max-md:w-[50%] h-[50px] text-white rounded-[30px] hover:bg-purple-800 cursor-pointer'/>
+      <form onSubmit={handleSubmit} className='text-center'>
+        <input name="email" id="email" type="email" placeholder="email" ref={email} className='bg-purple-950 m-auto text-white pl-3 w-[50%] mt-5 max-md:w-[95%] h-[50px] mb-5 rounded-[20px]'></input>
+        <input type="submit" value="Envoyez"  className='font-bold mb-5 bg-purple-900 ml-5 w-[10%] max-md:w-[50%] h-[50px] text-white rounded-[30px] hover:bg-purple-800 cursor-pointer'></input>
       </form>
       </section>
 
   )
 }
 
-export default Index
+export async function getStaticProps(context: any) {
+  return {
+    props: {
+      url: process.env.API_URL_LETTER,
+    },
+  }
+}
+
