@@ -12,7 +12,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -21,7 +21,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -30,10 +30,10 @@ export default function Article() {
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
+        <p className='rounded-[50px] hover:bg-purple-800 bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
         </div>
       </div>
       <hr className="mt-[100px]"/>
@@ -46,7 +46,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -55,7 +55,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -64,10 +64,10 @@ export default function Article() {
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
+        <p className='rounded-[50px] hover:bg-purple-800 bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
         </div>
       </div>
       <hr className="mt-[100px]"/>
@@ -80,7 +80,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -89,7 +89,7 @@ export default function Article() {
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
@@ -98,10 +98,10 @@ export default function Article() {
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
+        <p className='rounded-[50px] hover:bg-purple-800 bg-purple-900 text-center pb-3 w-[80px] border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
         </div>
       </div>
       </section>

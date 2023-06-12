@@ -47,7 +47,7 @@ export default function Index(props: CreateProps) {
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
@@ -56,7 +56,7 @@ export default function Index(props: CreateProps) {
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
@@ -65,11 +65,11 @@ export default function Index(props: CreateProps) {
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
-          <input type="text" value="En savoir plus" className='text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
+          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
         </div>
-        <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-5 border border-black text-white m-auto text-6xl cursor-pointer'>+</p></Link>
+        <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-5 border border-black hover:bg-purple-800 text-white m-auto text-6xl cursor-pointer'>+</p></Link>
       </div>
       <p className=' w-[70%] m-auto mt-5 leading-9 justify-center bg-neutral-100 p-5 rounded-[30px] font-medium'>
       Découvrez une expérience exclusive, rejoignez notre communauté et ne manquez plus jamais les dernières actualités, offres spéciales et contenus 
