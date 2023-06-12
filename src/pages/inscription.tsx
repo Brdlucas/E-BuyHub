@@ -46,7 +46,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
 return (
     <div>
             <h1 className="text-center text-5xl font-bold mt-3">Inscription</h1>
-            <div className="text-center mt-10 h-[200px]">
+            <div className="text-center mt-10  h-[721px]">
                 <form  onSubmit={handleSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
                     <label htmlFor='lastname'>Nom :</label>
                     <input type="text" name="lastname" id='lastname' ref={lastname} className="md:ml-3 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[40px]" placeholder="Martin"required/>

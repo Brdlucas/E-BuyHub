@@ -2,6 +2,7 @@ import React, { FormEventHandler, useRef } from 'react'
 import Image from 'next/image'
 import { newsLetters } from '../../utils/types'
 import { useRouter } from "next/router"
+import Link from 'next/link'
 
 interface CreateProps {
   url: string
@@ -38,7 +39,7 @@ export default function Index(props: CreateProps) {
 
   return (
     <section className="mt-5">
-      <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col'>
+      <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
         <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
           <Image className='m-auto mt-2' src={'/img/sch.jpg'} height={0} width={150} alt='sch.jpg' />
@@ -68,7 +69,7 @@ export default function Index(props: CreateProps) {
           </div>
         </div>
         </div>
-        <p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-5 border border-black text-white m-auto text-6xl cursor-pointer'>+</p>
+        <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-5 border border-black text-white m-auto text-6xl cursor-pointer'>+</p></Link>
       </div>
       <p className=' w-[70%] m-auto mt-5 leading-9 justify-center bg-neutral-100 p-5 rounded-[30px] font-medium'>
       Découvrez une expérience exclusive, rejoignez notre communauté et ne manquez plus jamais les dernières actualités, offres spéciales et contenus 
