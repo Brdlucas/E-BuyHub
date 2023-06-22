@@ -56,9 +56,9 @@ return (
                 <input type="email" name="email" id='email' ref={email} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com" required/>
                   <label htmlFor="email">Titre :</label>
                 <input type="text" name="title" id='title' ref={title} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="Problème | Demande" required/>
-                  <label htmlFor="email">Mot de passe :</label>
-                <input type="text" name="password" id='password' ref={description} className=" m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px] md:mt-5 w-[100%]" placeholder='**********' required/>
-                <input type="submit" className="cursor-pointer md:p-3 w-[200px] bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Envoyez" />
+                  <label htmlFor="email">Description :</label>
+                <input type="text" name="description" id='description' ref={description} className="m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[250px] md:mt-5 w-[100%]" required/>
+                <input type="submit" className="cursor-pointer md:p-3 w-[200px] hover:bg-purple-400 bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Envoyez" />
                 </div>
             </form>
         </div>
