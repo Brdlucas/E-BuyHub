@@ -1,6 +1,5 @@
 //IMPORT MONGOOSE
-import mongoose, { Model } from "mongoose"
-
+import mongoose from "mongoose"
 // CONNECTING TO MONGOOSE (Get Database Url from .env.local)
 const { DATABASE_URL } = process.env
 
@@ -15,10 +14,13 @@ export const connect = async () => {
   const UsersSchema = new mongoose.Schema({
     firstname: String,
     lastname: String,
-    email: String,
+    email: {
+      type: String,
+      unique: true
+    },
     title: String,
     password: String,
-  })
+  }, {toJSON: {getters: true}})
   
   // users models
   const Users = mongoose.models.Users || mongoose.model("Users", UsersSchema)

@@ -1,45 +1,14 @@
-import { useRouter } from "next/router"
-import { FormEventHandler, useRef } from "react"
+// import { useRouter } from "next/router"
+// import { FormEventHandler, useRef } from "react"
 import { Users } from "../../utils/types"
 import Link from "next/link"
-import { data } from "autoprefixer"
 
-interface CreateProps {
-    url: string
-}
+// interface CreateProps {
+//     url: string
+// props: CreateProps
+// }
 
-export default function Connexion(props: CreateProps) {
-    const router = useRouter()
-
-    const email = useRef<HTMLInputElement>(null)
-    const password = useRef<HTMLInputElement>(null)
-
-    const handleSubmit: FormEventHandler<HTMLFormElement> = async e => {
-        e.preventDefault()
-
-        let users: Users = { firstname: "", lastname: "", email: "", password: "",}
-  if (null !== email.current && password.current) {
-    users = { firstname: "", lastname: "", email: email.current.value, password: password.current.value }
-  }
-  try{
-    await fetch(props.url, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-    .then(response => response.json())
-    .catch(error => {
-      console.log(error);
-    })
-    console.log(data)
-    return <p>sssssssss</p>
-    router.push("/")
-
-  }catch {
-
-  }
-    }
+export default function Connexion() {
     return (
       <div>
         <h1 className="text-center text-5xl font-bold mt-3">Connexion</h1>
@@ -59,12 +28,12 @@ export default function Connexion(props: CreateProps) {
         </div>
     </div>
     )
-}
-
-export async function getStaticProps(context: any) {
-    return {
-      props: {
-        url: process.env.API_URL,
-      },
     }
-  }
+
+// export async function getStaticProps(context: any) {
+//     return {
+//       props: {
+//         url: process.env.API_URL,
+//       },
+//     }
+//   }

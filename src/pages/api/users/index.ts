@@ -14,13 +14,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const handleCase: ResponseFuncs = {
     // RESPONSE FOR GET REQUESTS
     GET: async (req: NextApiRequest, res: NextApiResponse) => {
-      try {
-        const { Users } = await connect() // connection a la base de données
-        res.json(await Users.find({}).catch(catcher))        
-      } catch (error) {
-        res.json(error);
-        res.status(405).end();
-      }
+      const { Users } = await connect();
+      const users = await Users.find({}).catch();
+      res.json({ status: 200, data: users });
     },
     // RESPONSE POST REQUESTS
     POST: async (req: NextApiRequest, res: NextApiResponse) => {

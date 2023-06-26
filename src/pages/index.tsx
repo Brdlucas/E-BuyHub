@@ -36,10 +36,11 @@ export default function Index(props: CreateProps) {
     })
     router.push("/")
   }
+  
 
   return (
     <section className="mt-5">
-      <p>{email.current?.value} ss</p>
+      <p>{email.current?.value}</p>
       <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
         <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
@@ -97,6 +98,7 @@ export default function Index(props: CreateProps) {
         <input name="email" id="email" type="email" placeholder="email" ref={email} className='bg-purple-950 m-auto text-white pl-3 w-[50%] mt-5 max-md:w-[95%] h-[50px] mb-5 rounded-[20px]' required/>
         <input type="submit" value="Envoyez"  className='font-bold mb-5 bg-purple-900 ml-5 w-[10%] max-md:w-[50%] h-[50px] text-white rounded-[30px] hover:bg-purple-800 cursor-pointer'/>
       </form>
+      {}
       </section>
 
   )
@@ -109,4 +111,6 @@ export async function getStaticProps(context: any) {
     },
   }
 }
+
+
 
