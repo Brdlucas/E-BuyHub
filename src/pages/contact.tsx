@@ -6,26 +6,26 @@ interface CreateProps {
   url: string
 }
 export default function Contact(props: CreateProps) {
-// création du router pour la redirection de page après connection
+
 const router = useRouter()
-// les valeurs a utiliser dans les "refs"
+
 const firstname = useRef<HTMLInputElement>(null)
 const lastname = useRef<HTMLInputElement>(null)
 const email = useRef<HTMLInputElement>(null)
 const title = useRef<HTMLInputElement>(null)
 const description = useRef<HTMLInputElement>(null)
 
-// Fonction pour créer un nouveau utilisateur
+
 const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
   event.preventDefault()
 
-  // construct new todo, create variable, check it item.current is not null to pass type checks
+
   let test: contact = { firstname: "", lastname: "", email: "", title: "", description: "",}
   if (null !== firstname.current && lastname.current && email.current && title.current && description.current) {
     test = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, title: email.current.value, description: description.current.value }
   }
 
-  // Make the API request
+
   await fetch(props.url, {
     method: "post",
     headers: {
@@ -35,11 +35,11 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
   })
     .then(response => response.json())
     .catch(error => {
-      // Gestion de l'erreur
+
       console.error(error)
     });
 
-  // retourne vers la page home
+
   router.push("/")
 }
 return (

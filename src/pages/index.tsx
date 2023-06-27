@@ -71,7 +71,7 @@ export default function Index(props: CreateProps) {
           </div>
         </div>
         </div>
-        <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-5 border border-black hover:bg-purple-800 text-white m-auto text-6xl cursor-pointer'>+</p></Link>
+        <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-1 border border-black hover:bg-purple-800 text-white m-auto text-6xl cursor-pointer'>+</p></Link>
       </div>
       <p className=' w-[70%] m-auto mt-5 leading-9 justify-center bg-neutral-100 p-5 rounded-[30px] font-medium'>
       Découvrez une expérience exclusive, rejoignez notre communauté et ne manquez plus jamais les dernières actualités, offres spéciales et contenus 

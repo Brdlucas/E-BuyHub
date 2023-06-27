@@ -26,7 +26,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
     users = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, password: password.current.value }
   }
 
-  // Make the API request
+  // API request
   await fetch(props.url, {
     method: "post",
     headers: {
