@@ -4,6 +4,9 @@ import Link from "next/link"
 function AdminUsers({ props }: any) {
     return (
       <div className="w-[90%] m-auto">
+        <div className="text-center mt-5">
+        <Link className="bg-blue-400 text-white font-bold hover:bg-blue-200 p-2 pl-[100px] text-[30px] px-[100px] w-full m-auto rounded-[20px]" href={'/admin/addProducts'}>Ajouter</Link>
+        </div>
             <table  className=" border-2 border-black m-auto text-center w-full text-2xl mt-5 font-semibold">
             <thead className="border-2 border-black h-[50px]">
               <th className="bg-blue-200 w-[200px]">Nom</th>
@@ -28,7 +31,7 @@ function AdminUsers({ props }: any) {
         ))}
         </table>
         <div className="text-center mt-5">
-        <Link className="bg-blue-400 text-white hover:text-gray-700 hover:bg-blue-200 p-2 pl-[100px] text-[30px]  px-[100px] w-full m-auto rounded-[20px]" href={'/admin'}>Retour</Link>
+        <Link className="bg-blue-400 text-white hover:text-gray-700 hover:bg-blue-200 p-2 pl-[100px] text-[30px]  px-[100px] w-full m-auto rounded-[20px]" href={'/admin/admin'}>Retour</Link>
         </div>
       </div>
     )

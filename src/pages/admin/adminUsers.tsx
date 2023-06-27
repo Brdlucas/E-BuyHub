@@ -9,7 +9,7 @@ function AdminUsers({ props }: any) {
               <th className="bg-blue-200">Prénom</th>
               <th className="border-2 border-black bg-blue-200">Nom</th>
               <th className="border-2 border-black bg-blue-200">Email</th>
-              <th className="border-2 border-black bg-blue-200 w-[400px]">Administation</th>
+              <th className="border-2 border-black bg-blue-200 w-[50px]">Administation</th>
             </thead>
       {props.map((user: any, i: any) => (
             <tbody key={i} className="h-[50px]">
@@ -24,7 +24,7 @@ function AdminUsers({ props }: any) {
         ))}
         </table>
         <div className="text-center mt-5">
-        <Link className="bg-blue-400 text-white hover:text-gray-700 hover:bg-blue-200 p-2 pl-[100px] text-[30px]  px-[100px] w-full m-auto rounded-[20px]" href={'/admin'}>Retour</Link>
+        <Link className="bg-blue-400 text-white hover:text-gray-700 hover:bg-blue-200 p-2 pl-[100px] text-[30px]  px-[100px] w-full m-auto rounded-[20px]" href={'/admin/admin'}>Retour</Link>
         </div>
       </div>
     )

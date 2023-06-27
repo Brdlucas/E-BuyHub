@@ -39,7 +39,7 @@ export default function AdminProducts(props: CreateProps) {
   }
   return (
     <div>
-    <h1 className="text-center text-5xl font-bold mt-3">Connexion</h1>
+    <h1 className="text-center text-5xl font-bold mt-3">Création d un nouveaux produit</h1>
     <div className="text-center mt-10 h-[721px]">
         <form onSubmit={handleSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
             <div className="flex flex-col md:w-[50%] md:m-auto md:mt-5">
