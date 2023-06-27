@@ -1,4 +1,5 @@
 //IMPORT MONGOOSE
+import { error } from "console"
 import mongoose from "mongoose"
 // CONNECTING TO MONGOOSE (Get Database Url from .env.local)
 const { DATABASE_URL } = process.env
@@ -61,4 +62,23 @@ export const contacts = async () => {
   const contact = mongoose.models.contact || mongoose.model("contact", ContactSchema)
 
   return {connContact, contact}
+}
+
+export const products = async () => {
+  const connProduct = await mongoose
+  .connect(DATABASE_URL as string)
+  .catch(error=> console.log(error))
+  console.log("Mongoose Réussi (products)")
+
+  const ProductSchema = new mongoose.Schema ({
+    name: String,
+    description: String,
+    price: Number,
+    category: String,
+    stock: Number,
+  })
+
+  const Products = mongoose.models.Products || mongoose.model("Products", ProductSchema)
+
+  return {connProduct, Products}
 }

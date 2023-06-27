@@ -13,7 +13,7 @@ export default function Connexion({props}: any) {
   const email = useRef<HTMLInputElement>(null)
   const password = useRef<HTMLInputElement>(null)
 
-  const handeSubmit: FormEventHandler<HTMLFormElement> = async e => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async e => {
       e.preventDefault()
 
       let users: Users = { firstname: "", lastname: "", email: "", password: "",}
@@ -31,7 +31,6 @@ if (null !== email.current && password.current) {
       .catch(error => {
         console.log(error);
       })
-      console.log(users.firstname)
       router.push("/")
   }
 
@@ -39,7 +38,7 @@ if (null !== email.current && password.current) {
       <div>
         <h1 className="text-center text-5xl font-bold mt-3">Connexion</h1>
         <div className="text-center mt-10 h-[721px]">
-            <form onSubmit={handeSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
+            <form onSubmit={handleSubmit} className="max-md:flex max-md:flex-col max-md:leading-[50px] w-[70%] m-auto" >
                 <div className="flex flex-col md:w-[50%] md:m-auto md:mt-5">
                   <label htmlFor="email">Email :</label>
                 <input type="email" name="email" id='email' ref={email} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="exemple@gmail.com" required/>

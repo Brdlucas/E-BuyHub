@@ -25,3 +25,11 @@ export interface ResponseFuncs {
     title: string
     description: string
   }
+
+  export interface Products {
+    name: string
+    description: string
+    price: number
+    category: string
+    stock: number
+  }
