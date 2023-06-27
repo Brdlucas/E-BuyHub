@@ -1,4 +1,7 @@
-function AdminUsers({ props }) {
+import Link from "next/link"
+
+
+function AdminUsers({ props }: any) {
     return (
       <div className="w-[90%] m-auto">
             <table  className=" border-2 border-black m-auto text-center w-full text-2xl mt-5 font-semibold">
@@ -20,6 +23,9 @@ function AdminUsers({ props }) {
             </tbody>
         ))}
         </table>
+        <div className="text-center mt-5">
+        <Link className="bg-blue-400 text-white hover:text-gray-700 hover:bg-blue-200 p-2 pl-[100px] text-[30px]  px-[100px] w-full m-auto rounded-[20px]" href={'/admin'}>Retour</Link>
+        </div>
       </div>
     )
   }

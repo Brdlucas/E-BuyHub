@@ -40,7 +40,6 @@ export default function Index(props: CreateProps) {
 
   return (
     <section className="mt-5">
-      <p>{email.current?.value}</p>
       <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
         <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
         <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
