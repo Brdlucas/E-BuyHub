@@ -66,7 +66,7 @@ return (
     )
 
 }
-export async function getStaticProps(context: any) {
+async function getStaticProps(context: any) {
   return {
     props: {
       url: process.env.API_URL_CONTACT,
