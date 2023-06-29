@@ -1,6 +1,8 @@
 import { useRouter } from "next/router"
 import { FormEventHandler, useRef } from "react"
 import { Products } from "../../../utils/types"
+import  getStaticProps  from "../servercomponents/addProduct"
+
 
 interface CreateProps {
     url: string
@@ -65,8 +67,7 @@ export default function AdminProducts(props: CreateProps) {
 </div>
   )
 }
-
-export async function getStaticProps(context: any) {
+export async function serv(context: any) {
     return {
       props: {
         url: process.env.API_URL_PRODUCT,

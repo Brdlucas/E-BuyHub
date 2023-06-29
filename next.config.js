@@ -6,7 +6,12 @@ const nextConfig = {
     API_URL: process.env.API_URL,
     API_URL_LETTER: process.env.API_URL_LETTER,
     API_URL_CONTACT: process.env.API_URL_CONTACT,
-  }
+    API_URL_CONTACT: process.env.API_URL_PRODUCT,
+  },
+  experimental: {
+    serverComponents: true,
+    reactRoot: true,
+  },
 }
 
 module.exports = nextConfig
