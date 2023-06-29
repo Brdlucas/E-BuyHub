@@ -8,10 +8,6 @@ const nextConfig = {
     API_URL_CONTACT: process.env.API_URL_CONTACT,
     API_URL_CONTACT: process.env.API_URL_PRODUCT,
   },
-  experimental: {
-    serverComponents: true,
-    reactRoot: true,
-  },
 }
 
 module.exports = nextConfig

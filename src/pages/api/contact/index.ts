@@ -12,8 +12,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const handleCase: ResponseFuncs = {
     POST: async (req: NextApiRequest, res: NextApiResponse) => {
       try {
-        const { contact } = await contacts() // connect to database
-        res.json(await contact.create(req.body).catch(catcher))
+        const { Contact } = await contacts() // connect to database
+        res.json(await Contact.create(req.body).catch(catcher))
         console.log(mongoose.connection.close());
       } catch (error) {
         res.json(error);
@@ -26,7 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const response = handleCase[method]
   if (response) response(req, res)
-  else res.status(400).json({ error: "No Response for This Request (contact)" })
+  else res.status(400).json({ error: "No Response for This Request" })
 }
 
-export default handler;
+export default handler

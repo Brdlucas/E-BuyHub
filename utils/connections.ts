@@ -59,9 +59,9 @@ export const contacts = async () => {
     descripiton: String
   })
 
-  const contact = mongoose.models.contact || mongoose.model("contact", ContactSchema)
+  const Contact = mongoose.models.Contact || mongoose.model("Contact", ContactSchema)
 
-  return {connContact, contact}
+  return {connContact, Contact}
 }
 
 export const products = async () => {

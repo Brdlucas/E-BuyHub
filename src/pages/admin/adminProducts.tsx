@@ -43,5 +43,5 @@ function AdminUsers({ props }: any) {
     const json = await res.json()
     return { props: json.data}
   }
-
+  
   export default AdminUsers;   

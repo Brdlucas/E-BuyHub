@@ -34,4 +34,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   else res.status(400).json({ error: "No Response for This Request" })
 }
 
-export default handler
+export default handler;

@@ -97,7 +97,6 @@ export default function Index(props: CreateProps) {
         <input name="email" id="email" type="email" placeholder="email" ref={email} className='bg-purple-950 m-auto text-white pl-3 w-[50%] mt-5 max-md:w-[95%] h-[50px] mb-5 rounded-[20px]' required/>
         <input type="submit" value="Envoyez"  className='font-bold mb-5 bg-purple-900 ml-5 w-[10%] max-md:w-[50%] h-[50px] text-white rounded-[30px] hover:bg-purple-800 cursor-pointer'/>
       </form>
-      {}
       </section>
 
   )

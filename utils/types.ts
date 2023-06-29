@@ -4,7 +4,7 @@ export interface ResponseFuncs {
     POST?: Function
     PUT?: Function
     DELETE?: Function
-  }
+  };
   
   // Interface pour le model frontend
   export interface Users {
@@ -12,24 +12,23 @@ export interface ResponseFuncs {
     lastname: string
     email: string
     password: string
-  }
+  };
 
   export interface newsLetters {
     email: string
-  }
+  };
 
-  export interface contact {
+  export interface Contact {
     firstname: string
     lastname: string
     email: string
     title: string
     description: string
-  }
-
+  };
   export interface Products {
     name: string
     description: string
     price: number
     category: string
     stock: number
-  }
+  };

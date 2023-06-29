@@ -1,5 +1,5 @@
 import React, { FormEventHandler, useRef } from 'react'
-import { contact } from '../../utils/types'
+import { Contact } from '../../utils/types'
 import { useRouter } from "next/router"
 
 interface CreateProps {
@@ -20,9 +20,9 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
   event.preventDefault()
 
 
-  let test: contact = { firstname: "", lastname: "", email: "", title: "", description: "",}
+  let iscontact: Contact = { firstname: "", lastname: "", email: "", title: "", description: "",}
   if (null !== firstname.current && lastname.current && email.current && title.current && description.current) {
-    test = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, title: email.current.value, description: description.current.value }
+    iscontact = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, title: email.current.value, description: description.current.value }
   }
 
 
@@ -31,11 +31,10 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.parse(JSON.stringify(test)),
+    body: JSON.stringify(iscontact),
   })
     .then(response => response.json())
     .catch(error => {
-
       console.error(error)
     });
 
@@ -66,7 +65,7 @@ return (
     )
 
 }
-async function getStaticProps(context: any) {
+export async function getStaticProps(context: any) {
   return {
     props: {
       url: process.env.API_URL_CONTACT,
