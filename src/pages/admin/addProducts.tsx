@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import { FormEventHandler, useRef } from "react"
 import { Products } from "../../../utils/types"
-import  getStaticProps  from "../servercomponents/addProduct"
 
 
 interface CreateProps {
