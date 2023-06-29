@@ -30,7 +30,7 @@ export default function AdminProducts(props: CreateProps) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(product),
+      body: JSON.parse(JSON.stringify(product)),
     })
     .then(response => response.json())
     .catch(error => {
