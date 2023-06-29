@@ -31,7 +31,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(test),
+    body: JSON.parse(JSON.stringify(test)),
   })
     .then(response => response.json())
     .catch(error => {
