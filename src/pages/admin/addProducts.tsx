@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { FormEventHandler, HTMLInputTypeAttribute, useRef } from "react"
+import { FormEventHandler, useRef } from "react"
 import { Products } from "../../../utils/types"
 
 interface CreateProps {
