@@ -32,7 +32,7 @@ function AdminUsers({ props }: any) {
 
 
   AdminUsers.getInitialProps = async () => {
-    const res = await fetch('http://localhost:3000/api/users')
+    const res = await fetch('/api/users')
     const json = await res.json()
     return { props: json.data}
   }

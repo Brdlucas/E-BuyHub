@@ -16,7 +16,7 @@ function AdminUsers({ props }: any) {
               <th className="border-2 border-black bg-blue-200 w-[400px]">Stockage</th>
               <th className="border-2 border-black bg-blue-200 w-[20px]">Actions</th>
             </thead>
-      {props.map((product: any, i: any) => (
+            {props.map((product: any, i: any) => (
             <tbody key={i} className="h-[50px]">
               <td className="border-2 border-black">{product.name}</td>
               <td className="border-2 border-black">{product.description}</td>
@@ -39,7 +39,7 @@ function AdminUsers({ props }: any) {
 
 
   AdminUsers.getInitialProps = async () => {
-    const res = await fetch('http://localhost:3000/api/products')
+    const res = await fetch('/api/products')
     const json = await res.json()
     return { props: json.data}
   }

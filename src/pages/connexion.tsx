@@ -17,7 +17,7 @@ if (null !== email.current && password.current) {
   users = { firstname: "", lastname: "", email: email.current.value, password: password.current.value }
 }
 
-      await fetch('http://localhost:3000/api/users', {
+      await fetch('/api/users', {
           method: "get",
           headers: {
               "Content-Type": "application/json",

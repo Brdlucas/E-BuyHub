@@ -23,12 +23,12 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
   }
 
 
-  await fetch('http://localhost:3000/api/contacts', {
+  await fetch('/api/contacts', {
     method: "post",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(iscontact),
+    body: JSON.parse(JSON.stringify(iscontact)),
   })
     .then(response => response.json())
     .catch(error => {

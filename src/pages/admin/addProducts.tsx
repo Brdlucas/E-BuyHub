@@ -3,11 +3,7 @@ import { FormEventHandler, useRef } from "react"
 import { Products } from "../../../utils/types"
 
 
-interface CreateProps {
-    url: string
-}
-
-export default function AdminProducts(props: CreateProps) {
+export default function AdminProducts() {
   const router = useRouter();
 
   const name = useRef<HTMLInputElement>(null)
@@ -25,7 +21,7 @@ export default function AdminProducts(props: CreateProps) {
       product = { name: name.current.value, description: description.current.value, price: price.current.valueAsNumber, category: category.current.value, stock: price.current.valueAsNumber}
     }
 
-    await fetch(props.url, {
+    await fetch('/api/products', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,10 +62,10 @@ export default function AdminProducts(props: CreateProps) {
 </div>
   )
 }
-export async function serv(context: any) {
-    return {
-      props: {
-        url: process.env.API_URL_PRODUCT,
-      },
-    }
-  }
+// export async function serv(context: any) {
+//     return {
+//       props: {
+//         url: process.env.API_URL_PRODUCT,
+//       },
+//     }
+//   }
