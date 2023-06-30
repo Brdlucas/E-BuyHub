@@ -4,7 +4,7 @@ export const Header:React.FC = () =>
 {
 
 return  <header className=" bg-purple-950 h-16 text-white max-md:h-[450px]" style={{border: "2px bg-purple solid", borderBottomLeftRadius: '50px' , borderBottomRightRadius: '50px',}}>
-    <div className="ml-10  w-[250px]">
+    <div className="ml-10 max-md:m-auto w-[250px]">
         <Link className="bg-black md:w-[5px]" href={"/"}><h1 className="max-md:m-auto max-md:w-[250px] md:w-[250px] font-bold text-5xl max-md:text-center">E-Buy-Hub</h1></Link>
     </div>
             <nav className="md:absolute md:w-96 md:flex md:space-x-5 md:top-0 md:right-0 md:pl-2 text-center md:mt-2 md:mx-[80px] max-[md]:flex max-md:flex-col">

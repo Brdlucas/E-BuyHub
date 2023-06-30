@@ -20,12 +20,12 @@ export default function Index() {
       letter = {email: email.current.value}
     }
 
-    await fetch('/api/newsletter', {
+    await fetch('http://localhost:3000/api/newsletter', {
       method: 'post',
       headers: {
         "Content-Type": "application/json",
       },
-      body:  JSON.parse(JSON.stringify(letter)),
+      body: JSON.stringify(letter),
     })
     .then(response => response.json())
     .catch(error => {

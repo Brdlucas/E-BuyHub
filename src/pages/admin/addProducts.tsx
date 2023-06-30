@@ -21,12 +21,12 @@ export default function AdminProducts() {
       product = { name: name.current.value, description: description.current.value, price: price.current.valueAsNumber, category: category.current.value, stock: price.current.valueAsNumber}
     }
 
-    await fetch('/api/products', {
+    await fetch('http://localhost:3000/api/products', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.parse(JSON.stringify(product)),
+      body: JSON.stringify(product),
     })
     .then(response => response.json())
     .catch(error => {
