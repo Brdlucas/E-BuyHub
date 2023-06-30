@@ -1,7 +1,6 @@
-//IMPORT MONGOOSE
-import { error } from "console"
+
 import mongoose from "mongoose"
-// CONNECTING TO MONGOOSE (Get Database Url from .env.local)
+
 const { DATABASE_URL } = process.env
 
 // connection function
@@ -19,7 +18,6 @@ export const connect = async () => {
       type: String,
       unique: true
     },
-    title: String,
     password: String,
   }, {toJSON: {getters: true}})
   
@@ -46,7 +44,7 @@ export const newsLetter = async () => {
 
 
 export const contacts = async () => {
-  const connContact = await mongoose
+  const connContacts = await mongoose
   .connect(DATABASE_URL as string)
   .catch(err => console.log(err))
   console.log("Mongoose Réussi (contact)")
@@ -56,12 +54,12 @@ export const contacts = async () => {
     lastname: String,
     email: String,
     title: String,
-    descripiton: String
+    isdescripiton: String
   })
 
-  const Contact = mongoose.models.Contact || mongoose.model("Contact", ContactSchema)
+  const Contacts = mongoose.models.Contacts || mongoose.model("Contacts", ContactSchema)
 
-  return {connContact, Contact}
+  return {connContacts, Contacts}
 }
 
 export const products = async () => {

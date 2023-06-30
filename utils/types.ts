@@ -18,13 +18,14 @@ export interface ResponseFuncs {
     email: string
   };
 
-  export interface Contact {
+  export interface Contacts {
     firstname: string
     lastname: string
     email: string
     title: string
-    description: string
+    isdescription: string
   };
+  
   export interface Products {
     name: string
     description: string

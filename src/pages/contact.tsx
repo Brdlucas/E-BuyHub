@@ -1,11 +1,8 @@
-import React, { FormEventHandler, useRef } from 'react'
-import { Contact } from '../../utils/types'
+import { FormEventHandler, useRef } from 'react'
+import { Contacts } from '../../utils/types'
 import { useRouter } from "next/router"
 
-interface CreateProps {
-  url: string
-}
-export default function Contact(props: CreateProps) {
+export default function Contact() {
 
 const router = useRouter()
 
@@ -13,20 +10,20 @@ const firstname = useRef<HTMLInputElement>(null)
 const lastname = useRef<HTMLInputElement>(null)
 const email = useRef<HTMLInputElement>(null)
 const title = useRef<HTMLInputElement>(null)
-const description = useRef<HTMLInputElement>(null)
+const isdescription = useRef<HTMLInputElement>(null)
 
 
 const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
-  event.preventDefault()
+  event.preventDefault();
 
 
-  let iscontact: Contact = { firstname: "", lastname: "", email: "", title: "", description: "",}
-  if (null !== firstname.current && lastname.current && email.current && title.current && description.current) {
-    iscontact = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, title: email.current.value, description: description.current.value }
+  let iscontact: Contacts = { firstname: "", lastname: "", email: "", title: "", isdescription: "",}
+  if (null !== firstname.current && lastname.current && email.current && title.current && isdescription.current) {
+    iscontact = { firstname: firstname.current.value, lastname: lastname.current.value, email: email.current.value, title: email.current.value, isdescription: isdescription.current.value }
   }
 
 
-  await fetch(props.url, {
+  await fetch('http://localhost:3000/api/contacts', {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +53,7 @@ return (
                   <label htmlFor="email">Titre :</label>
                 <input type="text" name="title" id='title' ref={title} className="mb-3 w-[100%] m-auto max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[50px]" placeholder="Problème | Demande" required/>
                   <label htmlFor="email">Description :</label>
-                <input type="text" name="description" id='description' ref={description} className="m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[250px] md:mt-5 w-[100%]" required/>
+                <input type="text" name="description" id='description' ref={isdescription} className="m-auto mb-5 max-md:w-[90%] pl-3 bg-violet-200 text-white max-md:h-[40px] max-md:m-auto rounded-[5px] md:h-[250px] md:mt-5 w-[100%]" required/>
                 <input type="submit" className="cursor-pointer md:p-3 w-[200px] hover:bg-purple-400 bg-purple-500 mt-5 mb-5 text-white rounded-lg max-md:w-[50%] m-auto" value="Envoyez" />
                 </div>
             </form>
@@ -65,11 +62,11 @@ return (
     )
 
 }
-export async function getStaticProps(context: any) {
-  return {
-    props: {
-      url: process.env.API_URL_CONTACT,
-    },
-  }
-}
+// export async function getStaticProps(context: any) {
+//   return {
+//     props: {
+//       url: process.env.API_URL_CONTACT,
+//     },
+//   }
+// }
       

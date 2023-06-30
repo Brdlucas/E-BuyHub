@@ -10,10 +10,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const catcher = (error: Error) => res.status(400).json({ error })
 
   const handleCase: ResponseFuncs = {
+    GET: async (req: NextApiRequest, res: NextApiResponse) => {
+      const { Contacts } = await contacts();
+      const contact = await Contacts.find({}).catch();
+      res.json({ status: 200, data: contact });
+    },
     POST: async (req: NextApiRequest, res: NextApiResponse) => {
       try {
-        const { Contact } = await contacts() // connect to database
-        res.json(await Contact.create(req.body).catch(catcher))
+        const { Contacts } = await contacts() // connect to database
+        res.json(await Contacts.create(req.body).catch(catcher))
         console.log(mongoose.connection.close());
       } catch (error) {
         res.json(error);
