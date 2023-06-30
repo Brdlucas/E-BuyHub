@@ -2,12 +2,8 @@ import { useRouter } from "next/router"
 import { FormEventHandler, useRef } from "react"
 import { Users } from "../../utils/types"
 import Link from "next/link"
-interface CreateProps {
-    url: string
-props: CreateProps
-}
 
-export default function Connexion({props}: any) {
+export default function Connexion() {
   const router = useRouter()
 
   const email = useRef<HTMLInputElement>(null)
@@ -21,7 +17,7 @@ if (null !== email.current && password.current) {
   users = { firstname: "", lastname: "", email: email.current.value, password: password.current.value }
 }
 
-      await fetch(props.url, {
+      await fetch('http://localhost:3000/api/users', {
           method: "get",
           headers: {
               "Content-Type": "application/json",
@@ -55,10 +51,10 @@ if (null !== email.current && password.current) {
     )
     }
 
-export async function getStaticProps(context: any) {
-    return {
-      props: {
-        url: process.env.API_URL,
-      },
-    }
-  }
+// export async function getStaticProps(context: any) {
+//     return {
+//       props: {
+//         url: process.env.API_URL,
+//       },
+//     }
+//   }

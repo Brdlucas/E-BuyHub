@@ -4,11 +4,8 @@ import { newsLetters } from '../../utils/types'
 import { useRouter } from "next/router"
 import Link from 'next/link'
 
-interface CreateProps {
-  url: string
-}
 
-export default function Index(props: CreateProps) {
+export default function Index() {
 
   const router = useRouter()
 
@@ -23,7 +20,7 @@ export default function Index(props: CreateProps) {
       letter = {email: email.current.value}
     }
 
-    await fetch(props.url, {
+    await fetch('http://localhost:3000/api/newsletter', {
       method: 'post',
       headers: {
         "Content-Type": "application/json",
@@ -102,13 +99,13 @@ export default function Index(props: CreateProps) {
   )
 }
 
-export async function getStaticProps(context: any) {
-  return {
-    props: {
-      url: process.env.API_URL_LETTER,
-    },
-  }
-}
+// export async function getStaticProps(context: any) {
+//   return {
+//     props: {
+//       url: process.env.API_URL_LETTER,
+//     },
+//   }
+// }
 
 
 
