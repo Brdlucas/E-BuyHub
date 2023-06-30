@@ -2,12 +2,7 @@ import { useRouter } from "next/router"
 import { FormEventHandler, useRef } from "react"
 import { Users } from "../../utils/types"
 
-// Définit le props pour le connecter au .env situé en bas
-interface CreateProps {
-  url: string
-}
-
-export default function Inscription(props: CreateProps) {
+export default function Inscription() {
 // création du router pour la redirection de page après connection
 const router = useRouter()
 // les valeurs a utiliser dans les "refs"
@@ -27,7 +22,7 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async event => {
   }
 
   // API request
-  await fetch(props.url, {
+  await fetch('http://localhost:3000/api/users', {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -67,10 +62,10 @@ return (
 }
 
 // exporter getStaticProps pour fournir l'URL de l'API au composant
-export async function getStaticProps(context: any) {
-  return {
-    props: {
-      url: process.env.API_URL,
-    },
-  }
-}
+// export async function getStaticProps(context: any) {
+//   return {
+//     props: {
+//       url: process.env.API_URL,
+//     },
+//   }
+// }
