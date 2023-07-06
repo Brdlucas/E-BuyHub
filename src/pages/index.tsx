@@ -36,30 +36,32 @@ export default function Index() {
   
 
   return (
-    <section className="mt-5">
-      <div className=' m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
+    <section className="mt-5 ">
+      <div className="bg-repeat-x bg-center bg-[url('/img/ciseaux.jpg')]">
+      </div>
+      <div className='bg-repeat-x bg-center bg-cover bg-[url("/img/backgroundimg.jpg")] m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
         <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
-        <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
-          <Image className='m-auto mt-2' src={'/img/sch.jpg'} height={0} width={150} alt='sch.jpg' />
-          <hr className='mt-2 border border-neutral-600'/>
+        <div className=' bg-black/40 text-white w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
+          <Image className='m-auto mt-2' src={'/img/sch2.png'} height={0} width={150} alt='sch2.png' />
+          <hr className='mt-2 border border-neutral-200'/>
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
           <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
-          <Image className='m-auto mt-2' src={'/img/ciseaux.jpg'} height={0} width={220} alt='ciseaux.jpg' />
-          <hr className='mt-2 border border-neutral-600'/>
+        <div className='bg-black/40 w-[250px] text-white  m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
+          <Image className='m-auto mt-2' src={'/img/ciseaux.png'} height={0} width={220} alt='ciseaux.png' />
+          <hr className='mt-2 border border-neutral-200'/>
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>
           <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <div className='bg-slate-100 w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
+        <div className='bg-black/40 w-[250px] text-white m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
           <Image className='m-auto mt-2' src={'/img/sac.webp'} height={0} width={150} alt='sch.jpg' />
-          <hr className='mt-2 border border-neutral-600'/>
+          <hr className='mt-2 border border-neutral-200'/>
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div className='text-center mt-2'>

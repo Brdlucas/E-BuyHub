@@ -50,11 +50,3 @@ if (null !== email.current && password.current) {
     </div>
     )
     }
-
-// export async function getStaticProps(context: any) {
-//     return {
-//       props: {
-//         url: process.env.API_URL,
-//       },
-//     }
-//   }

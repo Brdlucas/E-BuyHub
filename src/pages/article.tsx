@@ -7,7 +7,7 @@ export default function Article() {
         <div className='mt-1 m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-violet-300 max-md:flex max-md:flex-col'>
         <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
-          <Image className='m-auto mt-2' src={'/img/sch.jpg'} height={0} width={150} alt='sch.jpg' />
+          <Image className='m-auto mt-2' src={'/img/sch2.png'} height={0} width={150} alt='sch.jpg' />
           <hr className='mt-2 border dark:bg-gray-900'/>
           <p className='ml-1 font-bold'>Seche-cheveux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -16,7 +16,7 @@ export default function Article() {
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
-          <Image className='m-auto mt-2' src={'/img/sch.jpg'} height={0} width={150} alt='sch.jpg' />
+          <Image className='m-auto mt-2' src={'/img/sch2.png'} height={0} width={150} alt='sch.jpg' />
           <hr className='mt-2 border dark:bg-gray-900'/>
           <p className='ml-1 font-bold'>Siceaux</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -25,7 +25,7 @@ export default function Article() {
           </div>
         </div>
         <div className='w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-gray-300'>
-          <Image className='m-auto mt-2' src={'/img/sch.jpg'} height={0} width={150} alt='sch.jpg' />
+          <Image className='m-auto mt-2' src={'/img/sch2.png'} height={0} width={150} alt='sch.jpg' />
           <hr className='mt-2 border dark:bg-gray-900'/>
           <p className='ml-1 font-bold'>Sac a dos</p>
           <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
