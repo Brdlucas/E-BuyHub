@@ -25,8 +25,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         res.status(405).end();
         console.log(mongoose.connection.close());
       }
-      
     },
+
+    UPDATE: async (req: NextApiRequest, res: NextApiResponse) => {
+      try {
+        const { Contacts } = await contacts();
+        res.json(await Contacts.findByIdAndUpdate(req.body).catch(catcher));
+      } catch (error) {
+        res.json(error);
+        res.status(405).end();
+        console.log(mongoose.connection.close());
+      }
+    },
+
   }
 
   const response = handleCase[method]

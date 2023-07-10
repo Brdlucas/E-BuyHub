@@ -3,6 +3,7 @@ export interface ResponseFuncs {
     GET?: Function
     POST?: Function
     PUT?: Function
+    UPDATE?: Function
     DELETE?: Function
   };
   

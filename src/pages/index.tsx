@@ -3,9 +3,10 @@ import Image from 'next/image'
 import { newsLetters } from '../../utils/types'
 import { useRouter } from "next/router"
 import Link from 'next/link'
+import { products } from '../../utils/connections'
 
 
-export default function Index() {
+export default function Index({ props}: any) {
 
   const router = useRouter()
 
@@ -39,35 +40,20 @@ export default function Index() {
     <section className="mt-5 ">
       <div className="bg-repeat-x bg-center bg-[url('/img/ciseaux.jpg')]">
       </div>
-      <div className='bg-repeat-x bg-center bg-cover bg-[url("/img/backgroundimg.jpg")] m-auto pb-5  max-md:h-[1150px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
-        <div className='lg:flex md:place-content-stretch max-md:h-[1070px] mb-5'>        
-        <div className=' bg-black/40 text-white w-[250px] m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
-          <Image className='m-auto mt-2' src={'/img/sch2.png'} height={0} width={150} alt='sch2.png' />
+      <div className='bg-repeat-x bg-center bg-cover bg-[url("/img/backgroundimg.jpg")] m-auto pb-5  max-md:h-[1200px] max-md:mb-5 w-[80%]  border-2 border-black max-md:flex max-md:flex-col rounded-[50px]'>
+        <div className='lg:flex md:place-content-stretch max-md:h-[1100px] mb-5'>        
+        {props.slice(-3).map((product: any, key: any) => (
+          <div key={key} className=' bg-black/70 text-white w-[250px] m-auto mt-5 h-[350px] rounded-[25px] border-2 border-neutral-500'>
+            <Image className='m-auto mt-2' src='/img/sch2.png' height={0} width={150} alt='sch2.png' />
           <hr className='mt-2 border border-neutral-200'/>
-          <p className='ml-1 font-bold'>Seche-cheveux</p>
-          <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p className='ml-1 font-bold'>{product.name}</p>
+          <p className='ml-2'>{product.description}</p>
+          <p className=' m-auto w-[50%] text-[20px] text-center'>{product.price}€</p>
           <div className='text-center mt-2'>
           <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
           </div>
         </div>
-        <div className='bg-black/40 w-[250px] text-white  m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
-          <Image className='m-auto mt-2' src={'/img/ciseaux.png'} height={0} width={220} alt='ciseaux.png' />
-          <hr className='mt-2 border border-neutral-200'/>
-          <p className='ml-1 font-bold'>Siceaux</p>
-          <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div className='text-center mt-2'>
-          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
-          </div>
-        </div>
-        <div className='bg-black/40 w-[250px] text-white m-auto mt-5 h-[320px] rounded-[25px] border-2 border-neutral-500'>
-          <Image className='m-auto mt-2' src={'/img/sac.webp'} height={0} width={150} alt='sch.jpg' />
-          <hr className='mt-2 border border-neutral-200'/>
-          <p className='ml-1 font-bold'>Sac a dos</p>
-          <p className='ml-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div className='text-center mt-2'>
-          <input type="submit" value="En savoir plus" className='hover:bg-purple-800 text-center bg-purple-900 text-white rounded-[30px] h-[50px] w-[70%] m-auto cursor-pointer'/>
-          </div>
-        </div>
+        ))}
         </div>
         <Link href={"/article"} ><p className='rounded-[50px] bg-purple-900 text-center pb-3 w-[80px] mb-1 border border-black hover:bg-purple-800 text-white m-auto text-6xl cursor-pointer'>+</p></Link>
       </div>
@@ -101,13 +87,11 @@ export default function Index() {
   )
 }
 
-// export async function getStaticProps(context: any) {
-//   return {
-//     props: {
-//       url: process.env.API_URL_LETTER,
-//     },
-//   }
-// }
+Index.getInitialProps = async () => {
+  const res = await fetch('http://localhost:3000/api/products')
+  const json = await res.json()
+  return { props: json.data}
+}
 
 
 
