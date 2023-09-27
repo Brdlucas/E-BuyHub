@@ -25,8 +25,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         res.status(405).end();
         console.log(mongoose.connection.close());
       }
-      
+
     },
+
   }
 
   const response = handleCase[method]
